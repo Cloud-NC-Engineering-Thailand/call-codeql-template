@@ -11,6 +11,6 @@ jobs:
       actions: read
       contents: read
       security-events: write
-    uses: uoio1/reusable-workflow/.github/workflows/reuseable-scan-iac-code.yaml@master
+    uses: Cloud-NC-Engineering-Thailand/template-codeql/reuseable-scan-iac-code.yaml@master
     with:
       path: terraform-code-folder
