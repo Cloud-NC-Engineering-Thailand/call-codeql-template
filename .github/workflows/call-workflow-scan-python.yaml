@@ -1,4 +1,4 @@
-name: 'Call reusable workflow CodeQL Scan'
+name: 'Call reusable workflow CodeQL Scan python'
 on:
   push:
     branches: [ master ]

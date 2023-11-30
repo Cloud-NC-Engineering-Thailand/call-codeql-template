@@ -1,4 +1,4 @@
-name: 'Call reusable workflow CodeQL Scan'
+name: 'Call reusable workflow CodeQL Scan dotnet'
 on:
   push:
     branches: [ master ]
