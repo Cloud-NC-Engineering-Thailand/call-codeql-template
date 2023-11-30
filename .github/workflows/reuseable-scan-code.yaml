@@ -13,5 +13,5 @@ jobs:
       security-events: write
     uses: uoio1/reusable-workflow/.github/workflows/reuseable-scan-code.yaml@master
     with:
-      language: python
-      path: python-code-folder
+      language: 'python'
+      path: 'python-code-folder'
