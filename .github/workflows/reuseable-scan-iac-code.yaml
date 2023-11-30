@@ -1,30 +1,16 @@
-# name: 'Call reusable workflow CodeQL iac Scan'
-# on:
-#   push:
-#     branches: [ master ]
-#   pull_request:
-#     branches: [ master ]
+name: 'Call reusable workflow CodeQL iac Scan'
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
-# jobs:
-#   analyze:
-#     name: Analyze
-#     runs-on: ubuntu-latest
-#     permissions:
-#       actions: read
-#       contents: read
-#       security-events: write
-
-#     steps:
-#       - name: Checkout repository
-#         uses: actions/checkout@v4
-
-#       - name: Initialize and Analyze IaC
-#         id: codeql_iac
-#         uses: advanced-security/codeql-extractor-iac@main
-#         with:
-#           source-root: ${{ inputs.path }}
-
-#       - name: Upload SARIF file
-#         uses: github/codeql-action/upload-sarif@v2
-#         with:
-#           sarif_file: ${{ steps.codeql_iac.outputs.sarif }}
+jobs:
+  call-workflow-scan-terraform:
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    uses: uoio1/reusable-workflow/.github/workflows/reuseable-scan-iac-code.yaml@master
+    with:
+      path: terraform-code-folder

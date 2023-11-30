@@ -13,8 +13,8 @@ jobs:
       security-events: write
     uses: uoio1/reusable-workflow/.github/workflows/reuseable-scan-code.yaml@master
     with:
-      language: python
-      path: python-code-folder
+      language: 'python'
+      path: 'python-code-folder'
   
   call-workflow-scan-java:
     permissions:
@@ -23,8 +23,8 @@ jobs:
       security-events: write
     uses: uoio1/reusable-workflow/.github/workflows/reuseable-scan-code.yaml@master
     with:
-      language: java
-      path: java-code-folder
+      language: 'java'
+      path: 'java-code-folder'
 
   call-workflow-scan-dotnet:
     permissions:
@@ -33,5 +33,5 @@ jobs:
       security-events: write
     uses: uoio1/reusable-workflow/.github/workflows/reuseable-scan-code.yaml@master
     with:
-      language: cshap
-      path: dotnet-code-folder
+      language: 'csharp'
+      path: 'dotnet-code-folder'
