@@ -15,3 +15,4 @@ resource "kafka_topic" "topics" {
   partitions = 1
   replication_factor  = 1
 }
+
